@@ -5,32 +5,39 @@
 body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4; /*cor em hexadecimal*/
+    background-color: #2d1b4d; /*cor em hexadecimal*/
+    color: #ff00de;
     padding: 20px; /*alterei o padding 16/04*/
 }
 header{
-    background-color: #c0c0c0;/*cinza cocô kkkk */
-    color: #ffff; /*branco em hexadecimal*/
+    background-color: #4a2c73;
+    
     text-align: center; /*centraliza o texto*/
+    
 }
 nav a{ /*nav navigation a a, de link, vou trabalhar só no link*/
-    color: black; /*alterei a cor 16/04 */
+    color: rgb(255, 255, 255); /*alterei a cor 16/04 */
     text-decoration: none; /*tirei toda a decoração do texto*/
     padding: 4px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;/*radius é a borda arredondada */
-    background-color: #cccc;
+    background-color: #381d5e;
     border-bottom-color: #d8d;
 }
-nav a:hover{color: red;}
+nav a:hover {
+    color: #ff00de; /* O rosa */
+    text-shadow: 0 0 10px #ff00de; /* brilho*/
+}
 .bloco{ /*declaração de class, a class procede de "." */
-    background-color: #cccc;
-    color: black;
+    background-color: #4a2c73;
+    border-radius: 50px 15px 50px 15px;
     border: 1px dotted #a3a3; /*borda geral tracejada*/
     border-radius: 6px;
     padding: 16px;
     margin-bottom: 16px;
-    border-top: 2px solid #d8d; /*borda superior solida*/
+    border-top: 4px solid #ff4d4d   ; /*borda superior solida*/
+    border-radius: 0px 40px 0px 40px;
+    border-left: 5px solid #ff00de; /* Adiciona uma barrinha rosa na esquerda */
 }
 #galeria{ /* # significa id, onde coloca-se por ex.: id="galeria"
     só pode ter 1 com mesmo nome por página*/
@@ -41,26 +48,37 @@ nav a:hover{color: red;}
     padding: 20px;
 
 }
-.foto{
-    background: #ffffff;
-    padding: 12px 12px 20px 12px; /*lat dir, esq, baixo e topo*/
-    border: 1px solid #ff009d;
-    box-shadow: 0 4px 10px #620050;
-    width: 220px;/*largura*/
-    text-align: center;/*alinhamento ao centro*/
-    border-radius: 4px;
+.foto {
+    background: #381d5e;
+    padding: 20px; 
+    border: 1px solid #6b46a1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+    width: 300px;
+    text-align: center;
+    
+    /* Aqui definimos o arredondamento que fica o tempo todo */
+    border-radius: 30px; 
+    
+    /* Mantemos a transição para o zoom ser suave */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .foto img{
     width: 100%;
-    height: 220px;
+    height: 400px;
     object-fit: cover; /*efeito de sobrepor*/
     display: block;
+    border-radius: 15px;
 }
-.foto:hover{
-    transform: scale(1.50) rotate(2deg);  
+.foto:hover {
+    transform: scale(1.1) translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
+  
+
+
+
 .legenda{
+    color: #ff00de;
     margin-top: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
